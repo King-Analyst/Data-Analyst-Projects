@@ -1,0 +1,28 @@
+#Frida Kahlo Retrospective Off-Platform Project
+
+
+paintings = ["The Two Fridas", "My Dress Hangs Here", "Tree of Hope", "Self Portrait With Monkeys"]
+dates = [1939,1933,1946,1940]
+paintings = list(zip(paintings,dates))
+print(paintings)
+
+more_paintings = ["The Broken Column",1944,"The Wounded Deer",1946,"Me and My Doll",1937]
+paintings.extend(more_paintings)
+print(paintings)
+
+print(len(paintings))
+
+
+audio_tour_number = []
+
+start = 1
+end = len(paintings)
+
+if start < end:
+    audio_tour_number.extend(range(start,end))
+    audio_tour_number.append(end)
+
+print(audio_tour_number)
+
+master_list=list(zip(audio_tour_number,paintings))
+print(master_list)
